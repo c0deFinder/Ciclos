@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="card">
+            <img class="imagen" src="https://placedog.net/650/480?random" alt="perro1">
+            <input class="entry" placeholder="number" type="number" onkeyup="sumar();">
+            <h2 class="texto">Llevas: <span id="total">___</span> stickers</h2>
+            <button class="summit"
+            
+            onclick="
+            var elemento1 = document.querySelector('.entry').value;
+            var total = document.querySelector('#total')
+            total.innerHTML = elemento1;
+             var imagen = document.querySelector('.imagen');
+            // imagen.classList.add('rojo');
+             //imagen.classList.remove('rojo')
+
+            if (elemento1>10 )
+            total.innerHTML = 'más de 10 stickers, excedió su límite';
+
+            if (elemento1 && Number)
+            imagen.classList.add('rojo');
+
+            if (elemento1 && Number)
+            total.innerHTML = 'Llevas ' + elemento1;
+
+            if (elemento1>10 )
+            total.innerHTML = 'más de 10 stickers, excedió su límite';
+            ">
+                                <h2>Comprar</h2>
+            </button>
+
+            <button class="summit" onclick="
+             let imagen = document.querySelector('.imagen');
+ imagen.classList.add('rojo');
+ imagen.classList.remove('rojo')
+ total.innerHTML = 0
+ var palceholder = document.getElementById('entry').value;
+ entry.innerHTML = 0;
+  ">
+                Remover items
+            </button>
+
+        
+        </section>
+        <section class="card2">
+            <img class="imagen2" src="https://placedog.net/670/480?random" alt="perro2">
+            <input class="entry2" type="number" onkeyup="sumar();">
+            <h2 class="texto">Llevas: <span id="total2">___</span> stickers</h2>
+            <button class="summit" onclick="
+            var elemento2 = document.querySelector('.entry2').value;
+var total2 = document.querySelector('#total2')
+total2.innerHTML = elemento2;
+ var imagen2 = document.querySelector('.imagen2');
+// imagen.classList.add('rojo');
+ //imagen.classList.remove('rojo')
+if (elemento2>10 )
+total2.innerHTML = 'más de 10 stickers, excedió su límite';
+if (elemento2 && Number)
+imagen2.classList.add('rojo');
+if (elemento2 && Number)
+total2.innerHTML = 'Llevas ' + elemento2;
+if (elemento2>10 )
+total2.innerHTML = 'más de 10 stickers, excedió su límite';
+            
+            ">
+                                <h2>Comprar</h2>
+                                <button class="summit" onclick="
+                                let imagen2 = document.querySelector('.imagen2');
+                    imagen2.classList.add('rojo');
+                    imagen2.classList.remove('rojo')
+                    total2.innerHTML = 0
+                    var palceholder = document.getElementById('entry2').value;
+                    entry2.innerHTML = 0;
+                     ">
+                                   Remover items
+                               </button>
+            </button>
+        </section>
+        <section class="card3">
+            <img class="imagen3" src="https://placedog.net/690/480?random" alt="perro3">
+            <input class="entry3" type="number" onkeyup="sumar();">
+            <h2 class="texto">Llevas: <span id="total3">___</span> stickers</h2>
+            <button class="summit" onclick="
+                        var elemento3 = document.querySelector('.entry3').value;
+var total3 = document.querySelector('#total3')
+total3.innerHTML = elemento3;
+ var imagen3 = document.querySelector('.imagen3');
+// imagen.classList.add('rojo');
+ //imagen.classList.remove('rojo')
+if (elemento3>10 )
+total3.innerHTML = 'más de 10 stickers, excedió su límite';
+if (elemento3 && Number)
+imagen3.classList.add('rojo');
+if (elemento3 && Number)
+total3.innerHTML = 'Llevas ' + elemento2;
+if (elemento3>10 )
+total3.innerHTML = 'más de 10 stickers, excedió su límite';
+            
+            ">
+                                <h2>Comprar</h2>
+                                <button class="summit" onclick="
+                                let imagen3 = document.querySelector('.imagen3');
+                    imagen3.classList.add('rojo');
+                    imagen3.classList.remove('rojo')
+                    total3.innerHTML = 0
+                    var palceholder = document.getElementById('entry3').value;
+                    entry3.innerHTML = 0;
+                     ">
+                                   Remover items
+                               </button>
+            ">                    
+            </button>
+        </section>
+        <p class="title">Total: <span id="spTotal" ></span> __</p>
+    </div>
+
+    <section class="container2">
+
+       
+       
+            <script>
+                function sumar() {
+
+var total = 0;
+
+$(".entry, .entry2, .entry3 " ).each(function() {
+    
+
+    
+
+  if (isNaN(parseFloat($(this).val()))) {
+
+    total += 0;
+
+    ;
+
+  } else {
+
+    total += parseFloat($(this).val());
+    
+
+  }
+
+});
+
+//alert(total);
+if (total < 31){
+document.getElementById('spTotal').innerHTML = total;
+}
+
+}
+                
+            </script>
+        </h1>
+        <img class="Banner" src="https://placedog.net/660/480?random " alt="Banner" onclick="
+                               let Banner = document.querySelector('.Banner');
+       Banner.classList.add('rojo');
+       Banner.addEventListener('click', function(e){
+        Banner.classList.remove('rojo')
+
+
+});
+
+            ">
+            
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, animi necessitatibus tempora sapiente fugiat eveniet suscipit tenetur assumenda, quasi accusantium saepe non? Officiis temporibus quasi tempora commodi omnis quidem voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, itaque? Harum tempore tempora velit nam reiciendis inventore doloremque blanditiis, hic fuga magni maxime animi quas sit modi deserunt amet mollitia.</p>
+
+    </section>
+
+    <section class="valid">
+        <h2 style="color: rgb(182, 221, 155);" id="password">Ingrese el password</h2>
+<div class="continer3">
+    <select id="option1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+<select id="option2">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+
+<select id="option3">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+</div>
+<button class="summitPassword" onclick="verificar()
+">
+    <p>Ingresar</p>
+</button>
+
+
+</section>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+
+ <script src="./assets/script/script.js"></script>
+</body>
+</html>
